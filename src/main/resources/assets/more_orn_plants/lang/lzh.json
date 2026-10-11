@@ -1116,6 +1116,8 @@
   "more_orn_plants.configuration.enableLongevityForestEffects": "長壽林供效",
   "more_orn_plants.configuration.enablePenglaiEffects": "蓬萊供效",
   "more_orn_plants.configuration.enableRedHighlandsEffects": "映山紅供效",
+  "more_orn_plants.configuration.enableRedHighlandsHurtEnemy": "映山紅攻敵",
+  "more_orn_plants.configuration.valueOfRedHighlandsHurtEnemy": "映山紅攻敵值",
   "more_orn_plants.configuration.enableWutongBiomeHurtEnemy": "朝陽林攻敵",
   "more_orn_plants.configuration.enableCavesBiomeHurtEnemy": "紫英素玉洞攻敵",
   "more_orn_plants.configuration.enablePeachBiomeHurtEnemy": "世外桃源攻敵",
@@ -1140,6 +1142,9 @@
   "more_orn_plants.configuration.caiyunSwordThunderMultiplier": "彩云劍雷雨",
   "more_orn_plants.configuration.baihuaSwordFlowerMultiplier": "百花劍花朵",
   "more_orn_plants.configuration.baihuaSwordFloralBiomeMultiplier": "百花劍群系",
+
+  "death.attack.biome_damage": "%1$s 为天地所诛",
+  "death.attack.biome_damage.player": "%1$s 与 %2$s 缠斗之际，为天地所诛",
 
   "gui.destiny.village_peach": "桃花村",
   "gui.destiny.village_apricot": "杏花村"

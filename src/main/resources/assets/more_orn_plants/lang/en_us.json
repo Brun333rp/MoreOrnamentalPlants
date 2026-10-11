@@ -1116,6 +1116,8 @@
   "more_orn_plants.configuration.enableLongevityForestEffects": "Enable Longevity Forest Effects",
   "more_orn_plants.configuration.enablePenglaiEffects": "Enable Penglai Effects",
   "more_orn_plants.configuration.enableRedHighlandsEffects": "Enable Red Highlands Effects",
+  "more_orn_plants.configuration.enableRedHighlandsHurtEnemy": "Enable Red Highlands Hurting on Enemies",
+  "more_orn_plants.configuration.valueOfRedHighlandsHurtEnemy": "Base Value of Red Highlands Hurting on Enemies",
   "more_orn_plants.configuration.enableWutongBiomeHurtEnemy": "Enable Wutong Biome Hurting on Enemies",
   "more_orn_plants.configuration.enableCavesBiomeHurtEnemy": "Enable Caves Biome Hurting on Enemies",
   "more_orn_plants.configuration.enablePeachBiomeHurtEnemy": "Enable Peach Blossom Spring Biome Hurting on Enemies",
@@ -1140,6 +1142,9 @@
   "more_orn_plants.configuration.caiyunSwordThunderMultiplier": "Caiyun Sword Thunder Multiplier",
   "more_orn_plants.configuration.baihuaSwordFlowerMultiplier": "Baihua Sword Flower Multiplier",
   "more_orn_plants.configuration.baihuaSwordFloralBiomeMultiplier": "Baihua Sword Floral Biome Multiplier",
+
+  "death.attack.biome_damage": "%1$s was erased by the force of the biome",
+  "death.attack.biome_damage.player": "%1$s was erased by the force of the biome while fighting %2$s",
 
   "gui.destiny.village_peach": "Village Peach",
   "gui.destiny.village_apricot": "Village Apricot"

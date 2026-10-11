@@ -1116,6 +1116,8 @@
   "more_orn_plants.configuration.enableLongevityForestEffects": "是否譲長壽林提供效果",
   "more_orn_plants.configuration.enablePenglaiEffects": "是否譲蓬萊提供效果",
   "more_orn_plants.configuration.enableRedHighlandsEffects": "是否譲映山紅提供效果",
+  "more_orn_plants.configuration.enableRedHighlandsHurtEnemy": "是否譲映山紅伤害敵對生物",
+  "more_orn_plants.configuration.valueOfRedHighlandsHurtEnemy": "映山红伤敵基礎數值",
   "more_orn_plants.configuration.enableWutongBiomeHurtEnemy": "是否譲朝陽林伤害敵對生物",
   "more_orn_plants.configuration.enableCavesBiomeHurtEnemy": "是否譲紫英洞与素玉洞伤害敵對生物",
   "more_orn_plants.configuration.enablePeachBiomeHurtEnemy": "是否譲世外桃源伤害敵對生物",
@@ -1140,6 +1142,9 @@
   "more_orn_plants.configuration.caiyunSwordThunderMultiplier": "彩雲劍雷雨傷害倍率",
   "more_orn_plants.configuration.baihuaSwordFlowerMultiplier": "百花劍花朵增傷倍率",
   "more_orn_plants.configuration.baihuaSwordFloralBiomeMultiplier": "百花劍羣系增傷倍率",
+
+  "death.attack.biome_damage": "%1$s 被天地之力抹除",
+  "death.attack.biome_damage.player": "%1$s 在 %2$s 的注視下遭天地之力抹除",
 
   "gui.destiny.village_peach": "桃花村",
   "gui.destiny.village_apricot": "杏花村"

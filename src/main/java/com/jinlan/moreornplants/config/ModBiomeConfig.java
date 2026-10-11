@@ -70,6 +70,8 @@ public class ModBiomeConfig {
     public static final ModConfigSpec.BooleanValue ENABLE_LONGEVITY_FOREST_EFFECTS;
     public static final ModConfigSpec.BooleanValue ENABLE_PENGLAI_EFFECTS;
     public static final ModConfigSpec.BooleanValue ENABLE_RED_HIGHLANDS_EFFECTS;
+    public static final ModConfigSpec.BooleanValue ENABLE_RED_HIGHLANDS_HURT_ENEMY;
+    public static final ModConfigSpec.ConfigValue<Double> VALUE_OF_RED_HIGHLANDS_HURT_ENEMY;
     public static final ModConfigSpec.BooleanValue ENABLE_WUTONG_BIOME_HURT_ENEMY;
     public static final ModConfigSpec.BooleanValue ENABLE_CAVES_BIOME_HURT_ENEMY;
     public static final ModConfigSpec.BooleanValue ENABLE_PEACH_BIOME_HURT_ENEMY;
@@ -226,6 +228,10 @@ public class ModBiomeConfig {
                 .define("enablePenglaiEffects", true);
         ENABLE_RED_HIGHLANDS_EFFECTS = BUILDER
                 .define("enableRedHighlandsEffects", true);
+        ENABLE_RED_HIGHLANDS_HURT_ENEMY = BUILDER
+                .define("enableRedHighlandsHurtEnemy", true);
+        VALUE_OF_RED_HIGHLANDS_HURT_ENEMY = BUILDER
+                .define("valueOfRedHighlandsHurtEnemy", 20.0);
         ENABLE_WUTONG_BIOME_HURT_ENEMY = BUILDER
                 .define("enableWutongBiomeHurtEnemy", true);
         ENABLE_CAVES_BIOME_HURT_ENEMY = BUILDER

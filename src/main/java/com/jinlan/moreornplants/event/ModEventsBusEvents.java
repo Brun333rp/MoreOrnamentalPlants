@@ -61,6 +61,8 @@ import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.List;
 
+import static com.jinlan.moreornplants.init.ModDamageTypes.BIOME_DAMAGE;
+
 @EventBusSubscriber(modid = MoreOrnPlants.MODID)
 public class ModEventsBusEvents {
     private static final ResourceLocation LONGEVITY_MODIFIER_ID = ResourceLocation.fromNamespaceAndPath(MoreOrnPlants.MODID, "longevity_health_boost");
@@ -335,6 +337,29 @@ public class ModEventsBusEvents {
                         }
                     }
                 }
+                if (ModBiomeConfig.ENABLE_RED_HIGHLANDS_HURT_ENEMY.get() && biomeHolder.is(ModBiomes.RED_HIGHLANDS)) {
+                    float value = ModBiomeConfig.VALUE_OF_RED_HIGHLANDS_HURT_ENEMY.get().floatValue();
+                    if (entity instanceof ZombieVillager) {
+                        if (entity.getHealth() > 10.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 0.5f);
+                        }
+                    } else {
+                        float health = entity.getHealth();
+                        if (health <= 20.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value);
+                        } else if (health <= 40.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 2);
+                        } else if (health <= 60.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 3);
+                        } else if (health <= 80.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 4);
+                        } else if (health <= 100.0F) {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 5);
+                        } else {
+                            entity.hurt(entity.level().damageSources().source(BIOME_DAMAGE), value * 10);
+                        }
+                    }
+                }
                 if (ModBiomeConfig.ENABLE_CAVES_BIOME_HURT_ENEMY.get() && biomeHolder.is(ModBiomes.ZIYING_CAVES)) {
                     entity.hurt(entity.level().damageSources().wither(), 3.0F);
                     entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 200, 3));
@@ -405,12 +430,12 @@ public class ModEventsBusEvents {
                 MobEffectInstance currentRegen = entity.getEffect(MobEffects.DAMAGE_BOOST);
                 MobEffectInstance currentEffect2 = entity.getEffect(MobEffects.DAMAGE_RESISTANCE);
                 MobEffectInstance currentEffect3 = entity.getEffect(MobEffects.DIG_SPEED);
-                if (currentRegen == null || currentRegen.getDuration() < 12000 ||
-                        currentEffect2 == null || currentEffect2.getDuration() < 12000 ||
-                        currentEffect3 == null || currentEffect3.getDuration() < 12000) {
-                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 12300, 2));
-                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12300, 2));
-                    entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 12300, 2));
+                if (currentRegen == null || currentRegen.getDuration() < 6000 ||
+                        currentEffect2 == null || currentEffect2.getDuration() < 6000 ||
+                        currentEffect3 == null || currentEffect3.getDuration() < 6000) {
+                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 6300, 2));
+                    entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6300, 2));
+                    entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 6300, 2));
                 }
             }
             if (biomeHolder.is(ModTags.Biomes.FLOWERS_AND_MOON) && ModBiomeConfig.ENABLE_FLOWER_BIOME_EFFECTS.get()) {
