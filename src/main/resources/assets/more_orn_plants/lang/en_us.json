@@ -52,6 +52,7 @@
   "biome.more_orn_plants.ziying_caves": "Ziying Caves",
   "biome.more_orn_plants.suyu_caves": "Suyu Caves",
 
+  "more_orn_plants.the_qunfang": "The Qunfang",
   "dimension.more_orn_plants.the_qunfang": "The Qunfang",
   "travelerstitles.more_orn_plants.the_qunfang": "The Qunfang",
 
@@ -1147,8 +1148,8 @@
   "more_orn_plants.configuration.baihuaSwordFlowerMultiplier": "Baihua Sword Flower Multiplier",
   "more_orn_plants.configuration.baihuaSwordFloralBiomeMultiplier": "Baihua Sword Floral Biome Multiplier",
 
-  "death.attack.biome_damage": "%1$s was erased by the force of the biome",
-  "death.attack.biome_damage.player": "%1$s was erased by the force of the biome while fighting %2$s",
+  "death.attack.more_orn_plants.biome_damage": "%1$s was erased by the force of the biome",
+  "death.attack.more_orn_plants.biome_damage.player": "%1$s was erased by the force of the biome while fighting %2$s",
 
   "gui.destiny.village_peach": "Village Peach",
   "gui.destiny.village_apricot": "Village Apricot"
