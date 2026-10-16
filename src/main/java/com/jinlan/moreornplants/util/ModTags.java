@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -95,6 +96,7 @@ public class ModTags {
         public static final TagKey<Biome> NO_ENEMY = tag("no_enemy");
         public static final TagKey<Biome> HARVEST = tag("harvest");
         public static final TagKey<Biome> FLOWERS_AND_MOON = tag("flowers_and_moon");
+        public static final TagKey<Biome> BAIHUA_CAT_SPAWNS = tag("baihua_cat_spawns");
         public static final TagKey<Biome> PINK_BAIHUA_CAT = tag("has_baihua_cat_variant/pink_baihua_cat");
         public static final TagKey<Biome> BLUE_BAIHUA_CAT = tag("has_baihua_cat_variant/blue_baihua_cat");
         public static final TagKey<Biome> PURPLE_BAIHUA_CAT = tag("has_baihua_cat_variant/purple_baihua_cat");
@@ -105,6 +107,14 @@ public class ModTags {
 
         private static TagKey<Biome> tag(String name) {
             return TagKey.create(Registries.BIOME, ResourceLocation.parse(MoreOrnPlants.MODID + ":" + name));
+        }
+    }
+
+    public static class EntityTypes {
+        public static final TagKey<EntityType<?>> QUNFANG_ALLOWED = tag("qunfang_allowed");
+
+        private static TagKey<EntityType<?>> tag(String name) {
+            return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse(MoreOrnPlants.MODID + ":" + name));
         }
     }
 }

@@ -13,7 +13,7 @@ public class AncientWisteriaTrunkPlacer extends AncientCamphorTrunkPlacer {
                     Codec.intRange(0, 32).fieldOf("base_height").forGetter(placer -> placer.baseHeight),
                     Codec.intRange(0, 24).fieldOf("height_rand_a").forGetter(placer -> placer.heightRandA),
                     Codec.intRange(0, 24).fieldOf("height_rand_b").forGetter(placer -> placer.heightRandB),
-                    Codec.intRange(2, 10).fieldOf("fork_height").forGetter(placer -> placer.forkHeight),
+                    Codec.intRange(2, 16).fieldOf("fork_height").forGetter(placer -> placer.forkHeight),
                     Codec.intRange(2, 4).fieldOf("min_branches").forGetter(placer -> placer.minBranches),
                     Codec.intRange(3, 6).fieldOf("max_branches").forGetter(placer -> placer.maxBranches),
                     Codec.floatRange(0.0F, 1.0F).fieldOf("branch_chance").forGetter(placer -> placer.branchChance),

@@ -9,6 +9,7 @@ import com.jinlan.moreornplants.entity.ModEntities;
 import com.jinlan.moreornplants.entity.ai.goal.BaihuaCatAttackGoal;
 import com.jinlan.moreornplants.init.ModParticleTypes;
 import com.jinlan.moreornplants.item.ModItems;
+import com.jinlan.moreornplants.util.CommonTags;
 import com.jinlan.moreornplants.util.ModTags;
 import com.jinlan.moreornplants.worldgen.biome.ModBiomes;
 import net.minecraft.core.BlockPos;
@@ -65,6 +66,7 @@ public class BaihuaCat extends Cat {
     private int produceApricotTimer = 0;
     private int produceCrabappleTimer = 0;
     private int produceMeiTimer = 0;
+    private int produceQunfangTimer = 0;
     private int regenCooldown = 0;
 
     public BaihuaCat(EntityType<? extends Cat> entityType, Level level) {
@@ -155,6 +157,7 @@ public class BaihuaCat extends Cat {
         compound.putInt("ProduceApricotTimer", this.produceApricotTimer);
         compound.putInt("ProduceCrabappleTimer", this.produceCrabappleTimer);
         compound.putInt("ProduceMeiTimer", this.produceMeiTimer);
+        compound.putInt("ProduceQunfangTimer", this.produceQunfangTimer);
         compound.putInt("RegenCooldown", this.regenCooldown);
     }
 
@@ -172,6 +175,7 @@ public class BaihuaCat extends Cat {
         this.produceApricotTimer = compound.getInt("ProduceApricotTimer");
         this.produceCrabappleTimer = compound.getInt("ProduceCrabappleTimer");
         this.produceMeiTimer = compound.getInt("ProduceMeiTimer");
+        this.produceQunfangTimer = compound.getInt("ProduceQunfangTimer");
         this.regenCooldown = compound.getInt("RegenCooldown");
     }
 
@@ -276,6 +280,7 @@ public class BaihuaCat extends Cat {
                         else if (this.isApricot(itemstack) && produceApricotTimer == 0) produceApricotTimer = 100;
                         else if (this.isCrabapple(itemstack) && produceCrabappleTimer == 0) produceCrabappleTimer = 100;
                         else if (this.isMei(itemstack) && produceMeiTimer == 0) produceMeiTimer = 100;
+                        else if (this.isPeony(itemstack) && produceQunfangTimer == 0) produceQunfangTimer = 100;
                         itemstack.consume(1, player);
                         this.playSound(SoundEvents.CAT_EAT, 0.5F, 1.0F);
                         return InteractionResult.SUCCESS;
@@ -292,6 +297,9 @@ public class BaihuaCat extends Cat {
                         produced = true;
                     } else if (this.isMei(itemstack) && produceMeiTimer == 0) {
                         produceMeiTimer = 100;
+                        produced = true;
+                    } else if (this.isPeony(itemstack) && produceQunfangTimer == 0) {
+                        produceQunfangTimer = 100;
                         produced = true;
                     }
                     if (produced) {
@@ -353,6 +361,9 @@ public class BaihuaCat extends Cat {
     }
     public boolean isMei(ItemStack stack) {
         return stack.is(ModItems.MEI);
+    }
+    public boolean isPeony(ItemStack stack) {
+        return stack.is(CommonTags.Items.PEONY);
     }
 
     public boolean isWandering() {
@@ -437,6 +448,12 @@ public class BaihuaCat extends Cat {
                     this.giveMeiSaplings();
                 }
             }
+            if (this.produceQunfangTimer > 0) {
+                this.produceQunfangTimer--;
+                if (this.produceQunfangTimer == 0) {
+                    this.giveQunfangDraw();
+                }
+            }
 
             if (this.getHealth() < this.getMaxHealth()) {
                 if (this.regenCooldown <= 0) {
@@ -480,6 +497,12 @@ public class BaihuaCat extends Cat {
         this.spawnAtLocation(pinkMei);
         this.playSound(SoundEvents.CAT_PURR, 1.0F, 1.0F);
     }
+    protected void giveQunfangDraw() {
+        ItemStack stack = new ItemStack(ModBlocks.QUNFANG_DRAW.get());
+        this.spawnAtLocation(stack);
+        this.playSound(SoundEvents.CAT_PURR, 1.0F, 1.0F);
+    }
+
 
     private void growNearbyPlants() {
         BlockPos center = this.blockPosition();

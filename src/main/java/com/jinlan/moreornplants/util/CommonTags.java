@@ -36,6 +36,7 @@ public class CommonTags {
         public static final TagKey<Block> WEEPING_MEI = tag("weeping_mei");
         public static final TagKey<Block> WISTERIA = tag("wisteria");
 
+        public static final TagKey<Block> PEONY = tag("peony");
         public static final TagKey<Block> TREE_PEONY = tag("tree_peony");
         public static final TagKey<Block> CYMBIDIUM = tag("cymbidium");
         public static final TagKey<Block> HERBACEOUS_PEONY = tag("herbaceous_peony");
@@ -82,6 +83,7 @@ public class CommonTags {
         public static final TagKey<Item> WEEPING_MEI = tag("weeping_mei");
         public static final TagKey<Item> WISTERIA = tag("wisteria");
 
+        public static final TagKey<Item> PEONY = tag("peony");
         public static final TagKey<Item> TREE_PEONY = tag("tree_peony");
         public static final TagKey<Item> CYMBIDIUM = tag("cymbidium");
         public static final TagKey<Item> HERBACEOUS_PEONY = tag("herbaceous_peony");

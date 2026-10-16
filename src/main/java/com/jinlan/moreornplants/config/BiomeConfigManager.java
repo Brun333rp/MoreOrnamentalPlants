@@ -2,6 +2,9 @@ package com.jinlan.moreornplants.config;
 
 public class BiomeConfigManager {
     public static boolean isBiomeEnabled(String biomeName) {
+        if (!ModBiomeConfig.SPEC.isLoaded()) {
+            return true;
+        }
         return switch (biomeName) {
             case "red_mei_forest" -> ModBiomeConfig.ENABLE_RED_MEI_FOREST.get();
             case "fragrant_snow_sea" -> ModBiomeConfig.ENABLE_FRAGRANT_SNOW_SEA.get();

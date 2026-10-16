@@ -210,6 +210,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.copy(CommonTags.Blocks.CYMBIDIUM, CommonTags.Items.CYMBIDIUM);
 
+        this.copy(CommonTags.Blocks.PEONY, CommonTags.Items.PEONY);
         this.copy(CommonTags.Blocks.TREE_PEONY, CommonTags.Items.TREE_PEONY);
         this.copy(CommonTags.Blocks.HERBACEOUS_PEONY, CommonTags.Items.HERBACEOUS_PEONY);
 

@@ -1605,6 +1605,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MUXUE_GRASS_BLOCK =
             registerBlock("muxue_grass_block", () -> new HayBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).mapColor(MapColor.SNOW)));
 
+    public static final DeferredBlock<Block> QUNFANG_DRAW =
+            registerBlock("qunfang_draw", () -> new QunfangPortalBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).noCollission().randomTicks().instabreak().sound(SoundType.WOOD).pushReaction(PushReaction.BLOCK)));
+
     private static Block log(MapColor topMapColor, MapColor sideMapColor) {
         return new ModRotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(p_152624_ -> p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor)
                         .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava());

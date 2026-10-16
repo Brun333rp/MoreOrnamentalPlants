@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-05T17:48:18.3177369	Tags for minecraft:block mod id more_orn_plants
+// 1.21.1	2026-10-15T19:34:10.3211817	Tags for minecraft:block mod id more_orn_plants
 51fb7582a125cee46039e1c7f17e6d07c3db7d63 data/c/tags/block/apricot_leaves.json
 aef1a8dd14084e2835fc9025196586ca0cf0f545 data/c/tags/block/apricot_sapling.json
 b3bd8f768976738594784c7afc484b2d9ada6e33 data/c/tags/block/azalea.json
@@ -30,6 +30,7 @@ a93e8d4e063cb7dc4db2558f4c9a9520378ddde7 data/c/tags/block/osmanthus_leaves.json
 c34752788297cb2989f3bc35049a78ed54eb61fd data/c/tags/block/osmanthus_sapling.json
 960b1549927e56672e88e874ac5d93574b12f3d7 data/c/tags/block/peach_leaves.json
 d2f227cb07d552724083bba559a00fcb5854b235 data/c/tags/block/peach_sapling.json
+a25e01d61b6425990dc7e433913ed22cecfc669a data/c/tags/block/peony.json
 226dbb869a26a7a959cb3a933ef676346f23800d data/c/tags/block/plum_leaves.json
 05ee996126afa23df5258b108b49a838c71f437e data/c/tags/block/plum_sapling.json
 8962cc2aa9d2cc5eeea46a494d245d488ccc94d6 data/c/tags/block/rhododendron.json

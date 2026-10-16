@@ -758,6 +758,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.YAO_HUANG_PEONY.get(), ModBlocks.WEI_ZI_PEONY.get(), ModBlocks.ZHAO_PINK_PEONY.get(), ModBlocks.DOU_GREEN_PEONY.get(),
                         Blocks.PEONY, ModBlocks.LUOYANG_RED_PEONY.get(), ModBlocks.TWO_QIAO_PEONY.get(), ModBlocks.VERSICOLOR_PEONY.get());
 
+        this.tag(CommonTags.Blocks.PEONY)
+                .addTag(CommonTags.Blocks.TREE_PEONY);
+
         this.tag(CommonTags.Blocks.HERBACEOUS_PEONY)
                 .add(ModBlocks.PEONY.get(), ModBlocks.LIGHT_PINK_PEONY.get(), ModBlocks.VIOLET_PINK_PEONY.get(), ModBlocks.PINK_PEONY.get())
                 .add(ModBlocks.RED_PEONY.get(), ModBlocks.LIGHT_RED_PEONY.get(), ModBlocks.INK_RED_PEONY.get(), ModBlocks.VERMILION_PEONY.get())

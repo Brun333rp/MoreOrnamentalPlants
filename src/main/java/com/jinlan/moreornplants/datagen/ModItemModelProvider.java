@@ -525,6 +525,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BAIHUA_SWORD.get());
 
         evenSimplerBlockItem(ModBlocks.MUXUE_GRASS_BLOCK);
+        simplerBlockItem(ModBlocks.QUNFANG_DRAW);
     }
 
     private void saplingItem(DeferredBlock<Block> item) {
