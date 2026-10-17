@@ -1,7 +1,6 @@
 package com.jinlan.moreornplants.event;
 
 import com.jinlan.moreornplants.MoreOrnPlants;
-import com.jinlan.moreornplants.block.ModBlocks;
 import com.jinlan.moreornplants.config.ModBiomeConfig;
 import com.jinlan.moreornplants.item.ModItems;
 import com.jinlan.moreornplants.util.ModTags;
@@ -168,7 +167,7 @@ public class CombatDamageEvents {
             event.setAmount(event.getAmount() * multiplier);
         }
         if (!event.getSource().is(BIOME_DAMAGE)) {
-            boolean hasQunfangDraw = weapon.is(ModBlocks.QUNFANG_DRAW.get().asItem()) || offhand.is(ModBlocks.QUNFANG_DRAW.get().asItem());
+            boolean hasQunfangDraw = weapon.is(ModItems.QUNFANG_DRAW.get()) || offhand.is(ModItems.QUNFANG_DRAW.get());
             if (hasQunfangDraw) {
                 float extraDamage = player.level().dimension().equals(ModDimension.THE_QUNFANG_LEVEL) ? 6.0F : 3.0F;
                 int originalInvulnerableTime = target.invulnerableTime;
