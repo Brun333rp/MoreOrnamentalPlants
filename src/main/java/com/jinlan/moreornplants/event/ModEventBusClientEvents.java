@@ -3,6 +3,7 @@ package com.jinlan.moreornplants.event;
 import com.jinlan.moreornplants.MoreOrnPlants;
 import com.jinlan.moreornplants.MoreOrnPlantsClient;
 import com.jinlan.moreornplants.block.ModBlockEntities;
+import com.jinlan.moreornplants.block.ModBlocks;
 import com.jinlan.moreornplants.init.ModParticleTypes;
 import com.jinlan.moreornplants.item.ModItems;
 import com.jinlan.moreornplants.util.ModTags;
@@ -118,7 +119,7 @@ public class ModEventBusClientEvents {
             spawnSwordParticle(player, ModParticleTypes.CAMPHOR_LEAVES.get(), 16);
         } else if (weapon.is(ModItems.CHINESE_PARASOL_WOODEN_SWORD.get())) {
             spawnSwordParticle(player, ModParticleTypes.YELLOW_CHINESE_PARASOL_LEAVES.get(), 12);
-        } else if (weapon.is(ModItems.BAIHUA_SWORD.get())) {
+        } else if (weapon.is(ModItems.BAIHUA_SWORD.get()) || weapon.is(ModBlocks.QUNFANG_DRAW.asItem())) {
             spawnSwordParticle(player, ModParticleTypes.BAIHUA_CAT.get(), 24);
         }
     }
@@ -140,7 +141,7 @@ public class ModEventBusClientEvents {
             spawnSwordParticle(player, ModParticleTypes.CAMPHOR_LEAVES.get(), 16);
         } else if (weapon.is(ModItems.CHINESE_PARASOL_WOODEN_SWORD.get())) {
             spawnSwordParticle(player, ModParticleTypes.YELLOW_CHINESE_PARASOL_LEAVES.get(), 12);
-        } else if (weapon.is(ModItems.BAIHUA_SWORD.get())) {
+        } else if (weapon.is(ModItems.BAIHUA_SWORD.get()) || weapon.is(ModBlocks.QUNFANG_DRAW.asItem())) {
             spawnSwordParticle(player, ModParticleTypes.BAIHUA_CAT.get(), 24);
         }
     }
@@ -178,7 +179,7 @@ public class ModEventBusClientEvents {
                 spawnSwordParticle2(player, ModParticleTypes.SUYU_FOX.get());
             } else if (weapon.is(ModTags.Items.ZIYU_YUANYANG_TOOLS) || weapon.is(ModItems.ZIYU_YUANYANG_BEAD)) {
                 spawnSwordParticle2(player, ModParticleTypes.ZIYU_YUANYANG.get());
-            } else if (weapon.is(ModItems.BAIHUA_SWORD)) {
+            } else if (weapon.is(ModItems.BAIHUA_SWORD) || weapon.is(ModBlocks.QUNFANG_DRAW.asItem())) {
                 spawnSwordParticle2(player, ModParticleTypes.BAIHUA_CAT.get());
             }
             if (offHand.is(ModTags.Items.ZIYING_TOOLS) || offHand.is(ModItems.ZIYING_BEAD)) {
@@ -187,7 +188,7 @@ public class ModEventBusClientEvents {
                 spawnSwordParticle2(player, ModParticleTypes.SUYU_FOX.get());
             } else if (offHand.is(ModTags.Items.ZIYU_YUANYANG_TOOLS) || offHand.is(ModItems.ZIYU_YUANYANG_BEAD)) {
                 spawnSwordParticle2(player, ModParticleTypes.ZIYU_YUANYANG.get());
-            } else if (offHand.is(ModItems.BAIHUA_SWORD)) {
+            } else if (offHand.is(ModItems.BAIHUA_SWORD) || offHand.is(ModBlocks.QUNFANG_DRAW.asItem())) {
                 spawnSwordParticle2(player, ModParticleTypes.BAIHUA_CAT.get());
             }
         }

@@ -1,6 +1,7 @@
 package com.jinlan.moreornplants.event;
 
 import com.jinlan.moreornplants.MoreOrnPlants;
+import com.jinlan.moreornplants.block.ModBlocks;
 import com.jinlan.moreornplants.config.ModBiomeConfig;
 import com.jinlan.moreornplants.item.ModItems;
 import com.jinlan.moreornplants.util.ModTags;
@@ -34,6 +35,9 @@ public class CombatDamageEvents {
 
     @SubscribeEvent
     public static void onLivingDamage(LivingIncomingDamageEvent event) {
+        if (event.getSource().is(BIOME_DAMAGE)) {
+            return;
+        }
         LivingEntity target = event.getEntity();
         if (target.level().dimension().equals(ModDimension.THE_QUNFANG_LEVEL) && !event.getSource().is(BIOME_DAMAGE)) {
             event.setAmount(event.getAmount() * 0.5f);
@@ -82,6 +86,7 @@ public class CombatDamageEvents {
 
         if (!(event.getSource().getDirectEntity() instanceof Player player)) return;
         ItemStack weapon = player.getMainHandItem();
+        ItemStack offhand = player.getOffhandItem();
         LivingEntity target1 = event.getEntity();
         InventoryState state = getInventoryState(player);
         if (weapon.is(ModItems.PEACH_WOODEN_SWORD.get())) {
@@ -92,8 +97,9 @@ public class CombatDamageEvents {
                 float multiplier = 1.0f;
                 float maxHealth = target1.getMaxHealth();
                 if (maxHealth > 4.0f) {
+                    float currentDamage = Math.max(4.0f, event.getAmount());
                     multiplier = maxHealth / 2.0f;
-                    event.setAmount(multiplier * (event.getAmount() - 1));
+                    event.setAmount(multiplier * (currentDamage - 1));
                 } else {
                     event.setAmount(multiplier * (event.getAmount() + maxHealth));
                 }
@@ -160,6 +166,19 @@ public class CombatDamageEvents {
                 multiplier *= ModBiomeConfig.BAIHUA_SWORD_FLORAL_BIOME_MULTIPLIER.get().floatValue() * 2;
             }
             event.setAmount(event.getAmount() * multiplier);
+        }
+        if (!event.getSource().is(BIOME_DAMAGE)) {
+            boolean hasQunfangDraw = weapon.is(ModBlocks.QUNFANG_DRAW.get().asItem()) || offhand.is(ModBlocks.QUNFANG_DRAW.get().asItem());
+            if (hasQunfangDraw) {
+                float extraDamage = player.level().dimension().equals(ModDimension.THE_QUNFANG_LEVEL) ? 6.0F : 3.0F;
+                int originalInvulnerableTime = target.invulnerableTime;
+                float originalLastHurt = target.lastHurt;
+                target.invulnerableTime = 0;
+                target.lastHurt = 0;
+                target.hurt(player.damageSources().source(BIOME_DAMAGE, player), extraDamage);
+                target.invulnerableTime = originalInvulnerableTime;
+                target.lastHurt = originalLastHurt;
+            }
         }
     }
 
