@@ -10,13 +10,13 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class QunfangDrawBlockItem extends BlockItem {
-    public QunfangDrawBlockItem(Block pBlock, Properties pProperties) {
+public class QunfangScrollBlockItem extends BlockItem {
+    public QunfangScrollBlockItem(Block pBlock, Properties pProperties) {
         super(pBlock, pProperties);
     }
 
     public void appendHoverText(@NotNull ItemStack pStack, @Nullable TooltipContext pContext, List<Component> pTooltipComponents, @NotNull TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("tooltip.more_orn_plants.qunfang_draw.tooltip"));
+        pTooltipComponents.add(Component.translatable("tooltip.more_orn_plants.qunfang_scroll.tooltip"));
         if (pContext != null) {
             super.appendHoverText(pStack, pContext, pTooltipComponents, pIsAdvanced);
         }

@@ -167,7 +167,7 @@ public class CombatDamageEvents {
             event.setAmount(event.getAmount() * multiplier);
         }
         if (!event.getSource().is(BIOME_DAMAGE)) {
-            boolean hasQunfangDraw = weapon.is(ModItems.QUNFANG_DRAW.get()) || offhand.is(ModItems.QUNFANG_DRAW.get());
+            boolean hasQunfangDraw = weapon.is(ModItems.QUNFANG_SCROLL.get()) || offhand.is(ModItems.QUNFANG_SCROLL.get());
             if (hasQunfangDraw) {
                 float extraDamage = player.level().dimension().equals(ModDimension.THE_QUNFANG_LEVEL) ? 6.0F : 3.0F;
                 int originalInvulnerableTime = target.invulnerableTime;

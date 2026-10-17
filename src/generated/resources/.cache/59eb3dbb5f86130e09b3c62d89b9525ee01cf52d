@@ -1,4 +1,4 @@
-// 1.21.1	2026-10-13T21:19:08.8606735	Loot Tables
+// 1.21.1	2026-10-17T22:56:21.56478	Loot Tables
 9bd100ddc44a910aa4eca8eb5c99051f6dbb99a5 data/more_orn_plants/loot_table/blocks/apricot_button.json
 29ad296f9e5d5657f956312dd73126e53be96aa7 data/more_orn_plants/loot_table/blocks/apricot_door.json
 2555d27e581c071a3f86a0a8415b3dd543b8d640 data/more_orn_plants/loot_table/blocks/apricot_fence.json
@@ -582,7 +582,7 @@ b79a6fd98eba1733e46b110a767824156787c5db data/more_orn_plants/loot_table/blocks/
 c23aabbbc2b9c4d47b8812f508202759cbdaa349 data/more_orn_plants/loot_table/blocks/purple_rhododendron_leaves.json
 1fbf99f1b3648eff0dce389c7fd229e96b2b475e data/more_orn_plants/loot_table/blocks/purple_white_chinese_rose.json
 2b7e30dff6f409ef25718f76cb93e3e578d6a932 data/more_orn_plants/loot_table/blocks/purple_white_peony.json
-0db70d96743d5117f0799c2ca5a45a328cd2be1b data/more_orn_plants/loot_table/blocks/qunfang_draw.json
+36b42450505381f3740937d8e9412580f172afb0 data/more_orn_plants/loot_table/blocks/qunfang_scroll.json
 28094df5784d6fe1722c84d85cff900b6f0ada89 data/more_orn_plants/loot_table/blocks/red_azalea.json
 48675c6fcdc643e0c6df2a5c677e7e1a58c398c6 data/more_orn_plants/loot_table/blocks/red_azalea_leaves.json
 59ad4091a338c4882e45923d2bee17d6e280299d data/more_orn_plants/loot_table/blocks/red_chinese_wisteria.json

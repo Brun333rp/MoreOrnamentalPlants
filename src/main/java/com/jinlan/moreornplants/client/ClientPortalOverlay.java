@@ -18,7 +18,7 @@ import java.util.Objects;
 @EventBusSubscriber(modid = MoreOrnPlants.MODID, value = Dist.CLIENT)
 public class ClientPortalOverlay {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath(
-            MoreOrnPlants.MODID, "textures/gui/qunfang_draw.png");
+            MoreOrnPlants.MODID, "textures/gui/qunfang_scroll.png");
 
     private static final int TEX_SIZE = 512;
 
